@@ -1,0 +1,26 @@
+# config/config.yaml
+# 环境配置文件 - 集中管理测试环境信息
+
+# 基础配置
+base_url: "https://repo-test.wux-ai.com"  # 测试环境地址
+timeout: 30000  # 页面操作超时时间(毫秒)
+headless: false  # 是否无头模式运行
+
+# 浏览器配置
+browser:
+  type: "chromium"  # chromium/firefox/webkit
+  viewport:
+    width: 1920
+    height: 1080
+  slow_mo: 100  # 操作延迟(毫秒)，便于调试
+
+# 截图配置
+screenshot:
+  on_failure: true  # 失败时自动截图
+  path: "reports/screenshots"
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG/INFO/WARNING/ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "reports/test.log"

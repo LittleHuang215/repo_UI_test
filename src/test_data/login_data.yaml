@@ -1,0 +1,21 @@
+#登录测试数据
+
+#测试用例1：成功登录
+test_login_sucess:
+  description: "使用正确的用户名和密码登录"
+  username: "huangqimei"
+  password: "123456"
+  expected_result:
+    sucess: true
+    url_contains: ""
+    message: "登录成功"
+
+#测试用例2：用户名或密码错误
+test_login_invalid_username:
+  description: "使用错误的用户名登录"
+  username: "15985122149"
+  password: "123456"
+  expected_result:
+    sucess: false
+    url_contains: ""
+    message: "用户名或密码错误"
