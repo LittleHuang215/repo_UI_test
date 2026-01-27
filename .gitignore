@@ -1,4 +1,90 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
-.venv/
+# 敏感文件
+.env
+.env.local
+*.env
+config.json
+credentials/
+secrets/
+keys/
+config_test.py
+*.log
+# 开发文件
+__pycache__/
+*.py[cod]
+venv/
 env/
-vern/
+reports/
+# ========================================
+# 测试和报告文件
+# ========================================
+# 测试报告
+reports/
+allure-results/
+allure-report/
+test-results/
+test-reports/
+html/
+*.html
+*.xml
+*.json
+
+# 日志文件
+*.log
+logs/
+
+# ========================================
+# 依赖管理
+# ========================================
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pipenv
+Pipfile.lock
+pipenv-report.html
+
+# poetry
+poetry.lock
+
+# ========================================
+# UI 自动化测试特定文件
+# ========================================
+# 浏览器驱动
+chromedriver.exe
+geckodriver.exe
+msedgedriver.exe
+IEDriverServer.exe
+
+# 截图和录屏
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+
+# 下载文件
+downloads/
+*.pdf
+*.xlsx
+*.csv
+
+# 临时文件
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ========================================
+# 数据库文件
+# ========================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ========================================
+# 项目特定文件（根据实际情况添加）
+# ========================================
+# 示例：忽略特定项目文件
+# project_specific_config.yaml
+# local_settings.py
