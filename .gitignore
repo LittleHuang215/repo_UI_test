@@ -88,3 +88,5 @@ tmp/
 # 示例：忽略特定项目文件
 # project_specific_config.yaml
 # local_settings.py
+*.pytest_cache/
+src/.pytest_cache/
