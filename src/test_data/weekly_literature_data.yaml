@@ -1,0 +1,64 @@
+# test_data/weekly_literature_data.yaml
+# TC-02本周文献速递测试数据
+
+# 测试用户信息（需要根据实际情况修改）
+test_user:
+  username: "huangqimei"
+  password: "123456"  # 请替换为实际密码
+
+# 文献列表验证配置
+weekly_literature:
+  # 预期文献数量范围
+  expected_min_count: 1
+  expected_max_count: 200
+  
+  # 本周必读篇数
+  weekly_must_read: 5
+  
+  # 需要验证的文献信息字段
+  required_fields:
+    - title
+    - author
+    - journal
+    - date
+  
+  # 可选字段
+  optional_fields:
+    - impact_factor
+    - citation_count
+    - ai_interpretation
+    - keyword_tags
+
+# 文献详情页验证配置
+literature_detail:
+  # 页面加载超时时间（毫秒）
+  page_load_timeout: 10000
+  
+  # 必须字段
+  required_fields:
+    - title  # 中文或英文标题至少有一个
+    - authors
+    - journal
+    - publish_date
+  
+  # 推荐字段
+  recommended_fields:
+    - impact_factor
+    - citation_count
+    - ai_interpretation
+  
+  # AI解读最小长度（字符数）
+  ai_interpretation_min_length: 50
+
+# 测试关键词（用于搜索和验证）
+test_keywords:
+  - "Resource recovery"
+  - "Industrial wastewater treatment"
+  - "Circular economy"
+  - "Water treatment"
+
+# 超时配置
+timeouts:
+  page_load: 10000  # 页面加载超时（毫秒）
+  element_wait: 5000  # 元素等待超时（毫秒）
+  network_idle: 3000  # 网络空闲等待（毫秒）
