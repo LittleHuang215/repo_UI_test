@@ -90,4 +90,6 @@ tmp/
 # local_settings.py
 *.pytest_cache/
 src/.pytest_cache/
-*./myenv/*
+*./myenv/
+*env/
+
