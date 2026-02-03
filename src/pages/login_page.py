@@ -18,7 +18,7 @@ class LoginPage(BasePage):
     LOGIN_BUTTON = '._submitBtn_191sl_225' # 登录按钮
     ERROR_MESSAGE = '._messageContent_co722_98' # 错误提示信息
     SUCCESS_MESSAGE = '._messageContent_co722_98'#提示登录成功信息
-    SUCCESS_TITLE = '.font-bold.tracking-tight' # 标题栏的文字是无相智库
+    SUCCESS_TITLE = '.font-bold.tracking-tight' # 标题栏的文字是智库
 
 
     def __init__(self, page:Page, base_url):
@@ -109,6 +109,6 @@ class LoginPage(BasePage):
         return：是否登录成功
         :param self: Description
         '''
-        message = "无相智库"
+        message = "智库"
         actual_text = self.get_text(self.SUCCESS_TITLE)
         return message in actual_text
