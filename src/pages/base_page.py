@@ -112,3 +112,32 @@ class BasePage:
         path = f"reports/screenshots/{name}.png"
         self.page.screenshot(path=path)
         self.logger.info(f"截图已保存：{path}")
+
+    def inject_case_label(self, case_name: str):
+        '''
+        向页面底部注入显示当前用例名的悬浮标签
+        :param case_name: 当前测试用例名称
+        '''
+        self.page.evaluate("""(caseName) => {
+            const existing = document.getElementById('__pytest_case_label__');
+            if (existing) existing.remove();
+            const label = document.createElement('div');
+            label.id = '__pytest_case_label__';
+            label.innerText = '用例：' + caseName;
+            Object.assign(label.style, {
+                position: 'fixed',
+                bottom: '12px',
+                right: '12px',
+                zIndex: '999999',
+                background: 'rgba(0, 0, 0, 0.65)',
+                color: '#fff',
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontSize: '13px',
+                fontFamily: 'monospace',
+                pointerEvents: 'none',
+                letterSpacing: '0.5px',
+            });
+            document.body.appendChild(label);
+        }""", case_name)
+        self.logger.info(f"注入用例标签：{case_name}")

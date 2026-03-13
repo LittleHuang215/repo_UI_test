@@ -15,7 +15,7 @@ class LoginPage(BasePage):
     # 页面元素定位器 - 集中管理，便于维护
     USERNAME_INPUT = '#user_name_input' # 用户名输入框
     PASSWORD_INPUT = '#password_input' # 密码输入框
-    LOGIN_BUTTON = '._submitBtn_191sl_225' # 登录按钮
+    LOGIN_BUTTON = 'button[type=submit]'   # 登录按钮
     ERROR_MESSAGE = '._messageContent_co722_98' # 错误提示信息
     SUCCESS_MESSAGE = '._messageContent_co722_98'#提示登录成功信息
     SUCCESS_TITLE = '.font-bold.tracking-tight' # 标题栏的文字是智库
@@ -103,12 +103,13 @@ class LoginPage(BasePage):
     
     def is_login_sucessful(self):
         '''
-        Docstring for is_login_sucessful
-        判断是否登录成功
-        是否展示首页
-        return：是否登录成功
-        :param self: Description
+        判断是否登录成功：检查首页标题是否包含"智库"
+        使用 is_visible 避免元素不存在时的 30s 超时
         '''
-        message = "智库"
-        actual_text = self.get_text(self.SUCCESS_TITLE)
-        return message in actual_text
+        try:
+            if not self.page.locator(self.SUCCESS_TITLE).is_visible(timeout=3000):
+                return False
+            actual_text = self.get_text(self.SUCCESS_TITLE)
+            return "智库" in actual_text
+        except Exception:
+            return False

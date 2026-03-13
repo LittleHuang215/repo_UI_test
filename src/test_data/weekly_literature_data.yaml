@@ -3,7 +3,7 @@
 
 # 测试用户信息（需要根据实际情况修改）
 test_user:
-  username: "huangqimei"
+  username: "test001"
   password: "123456"  # 请替换为实际密码
 
 # 文献列表验证配置

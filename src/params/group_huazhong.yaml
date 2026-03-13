@@ -1,0 +1,140 @@
+# P-02: 华中科技大学课题组数据
+# 对应账号：test001
+# 研究方向：面向水污染控制化学，单原子催化与类芬顿氧化，高盐废水处理技术
+
+group:
+  id: huazhong
+  name: 华中科技大学课题组
+  research_direction: 面向水污染控制化学，研究以单原子催化与类芬顿氧化为核心的工业与饮用水中新污染物深度去除机理、高盐废水处理技术及工艺智能适配模型
+
+  # 首页搜索框测试关键词
+  search_box_keyword: "Water treatment"
+
+  # AI检索关键词分组
+  ai_search:
+    # 课题组相关关键词（随机选取 2~3 个用于检索）
+    related:
+      - "Single-atom catalysts"
+      - "Emerging contaminants"
+      - "Fenton-like catalytic oxidation"
+      - "Advanced oxidation processes"
+      - "High-salinity wastewater"
+      - "Peroxymonosulfate activation"
+      - "Water pollution control"
+      - "Environmental nanocatalysis"
+    # 课题组无关关键词（用于负向测试）
+    unrelated:
+      - "古代诗词"
+      - "中国古典建筑"
+
+  # 全部关键词列表（用于历史速递关键词相关性校验）
+  keywords:
+    zh:
+      - 水污染控制
+      - 水处理
+      - 工业废水处理
+      - 工业水处理
+      - 水深度处理
+      - 三级水处理
+      - 新污染物
+      - 关注型新污染物
+      - 有机微污染物
+      - 痕量有机污染物
+      - 难降解有机污染物
+      - 持久性有机污染物
+      - 超高盐废水
+      - 高盐废水
+      - 高级氧化过程
+      - 高级氧化技术
+      - 非羟基自由基路径
+      - 非自由基氧化路径
+      - 直接氧化转移过程
+      - 氧化转移
+      - 单原子催化剂
+      - 单原子催化
+      - Fe-N4 单原子位点
+      - Fe-Nx 单原子位点
+      - 微环境调控
+      - 微环境工程
+      - 过一硫酸盐活化
+      - 过硫酸盐活化
+      - 环境纳米催化
+      - 环境催化
+      - 电化学废水处理
+      - 电化学水处理
+      - 资源回收
+      - 循环经济
+      - 催化聚合
+      - 类芬顿催化氧化
+      - 生物炭基功能材料
+    en:
+      - "Water pollution control"
+      - "Water treatment"
+      - "Industrial wastewater treatment"
+      - "Industrial water treatment"
+      - "Advanced water treatment"
+      - "Tertiary water treatment"
+      - "Emerging contaminants"
+      - "Contaminants of emerging concern"
+      - "Organic micropollutants"
+      - "Trace organic contaminants"
+      - "Refractory organic pollutants"
+      - "Persistent organic pollutants"
+      - "Hypersaline wastewater"
+      - "High-salinity wastewater"
+      - "Advanced oxidation processes"
+      - "AOPs"
+      - "Non-hydroxyl radical pathways"
+      - "Non-radical oxidation pathways"
+      - "Direct oxidative transfer process"
+      - "Oxidative transfer"
+      - "Single-atom catalysts"
+      - "Single atom catalysis"
+      - "Fe-N4 single-atom sites"
+      - "Fe-Nx single-atom sites"
+      - "Microenvironment regulation"
+      - "Microenvironment engineering"
+      - "Peroxymonosulfate activation"
+      - "Persulfate activation"
+      - "Environmental nanocatalysis"
+      - "Environmental catalysis"
+      - "Electrochemical wastewater treatment"
+      - "Electrochemical water treatment"
+      - "Resource recovery"
+      - "Circular economy"
+      - "Catalytic polymerization"
+      - "Fenton-like catalytic oxidation"
+      - "Biochar-based functional materials"
+
+  # 关注作者列表
+  authors:
+    - index: 0
+      name_zh: 俞汉青
+      name_en: Yu Han-qing
+      scopus_id: "35202335200"
+      openalex_id: A5100337957
+      organization: Chinese Academy of Sciences
+    - index: 1
+      name_zh: 张礼知
+      name_en: Zhang Li-zhi
+      scopus_id: "55983809500"
+      openalex_id: A5100663896
+      organization: Shanghai Jiao Tong University
+    - index: 2
+      name_zh: 邢明阳
+      name_en: Xing Ming-yang
+      scopus_id: "26538239900"
+      openalex_id: A5110771899
+      organization: East China University of Science and Technology
+    - index: 3
+      name_zh: 展思辉
+      name_en: Zhan Si-hui
+      scopus_id: "24082008900"
+      openalex_id: A5059413717
+      organization: Tianjin University
+    - index: 4
+      name_zh: 沈益忠
+      name_en: Shen Yi-zhong
+      scopus_id: "55670446500"
+      openalex_id: A5022286423
+      organization: Hefei University of Technology

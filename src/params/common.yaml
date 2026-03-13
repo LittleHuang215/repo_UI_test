@@ -1,0 +1,61 @@
+# P-03: 通用配置参数
+# 与课题组无关的公共测试参数
+
+common:
+  # 首页文献速递数量
+  literature_count: 5
+
+  # 每周巡检文献数量
+  inspect_count: 10
+
+  # 每周巡检随机抽取账号数量（0 表示全量巡检）
+  account_sample: 1
+
+  # 历史速递随机抽样数量
+  history_sample: 3
+
+  # AI检索筛选条件项
+  filter_items:
+    - 发表年份
+    - 影响因子
+    - 期刊质量
+    - 作者
+    - 机构
+
+  # 登录错误测试用例数据
+  login_error_cases:
+    - id: wrong_password
+      username: test001
+      password: "wrong_password_123"
+      expected_msg: 账号或密码错误
+    - id: wrong_username
+      username: not_exist_user
+      password: "123456"
+      expected_msg: 账号或密码错误
+    - id: empty_fields
+      username: ""
+      password: ""
+      expected_msg: 请输入账号
+
+  # 文献详情必验字段
+  literature_detail_required:
+    - title_translation    # 标题翻译
+    - metadata             # 元数据
+    - abstract_zh          # 中文摘要
+    - abstract_en          # 英文摘要
+    - problem              # 文献试图解决什么问题
+    - method               # 文献提出的方法是什么
+    - experiment           # 文献做了哪些实验
+
+  # 文献详情随机验字段（随机选验）
+  literature_detail_optional:
+    - pdf_link             # PDF跳转
+    - source_link          # 来源跳转
+    - doi_link             # DOI点击响应
+    - collect              # 收藏功能
+    - cite                 # 引用功能
+
+  # 引用格式列表
+  cite_formats:
+    - BibTeX
+    - RIS
