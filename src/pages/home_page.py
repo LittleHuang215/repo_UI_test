@@ -24,11 +24,11 @@ class HomePage(BasePage):
     ITEM_TITLE           = '[class*="_title_"]'                         # 英文标题
     ITEM_META_ROW        = '[class*="metaRow"]'                         # 元数据行（期刊/作者）
     AI_ANALYSIS          = '[class*="highlightBox"]'                    # AI 解读内容框
-    LITERATURE_TRANSLATE = '[class*="subtitleLarge"]'                   # 中文副标题（翻译）
+    LITERATURE_TRANSLATE = '[class*="subtitle"]'                        # 中文副标题（翻译）
     COLLECT_BTN          = 'span[style*="cursor: pointer"]'     # 收藏按钮（含 bookmark SVG 的可点击 span）
 
     # ── "共X篇"跳转按钮 ──────────────────────────────────────
-    TOTAL_COUNT_BTN = '[class*="_more_"]:has-text("共")'
+    TOTAL_COUNT_BTN = ':is([class*="_more_"], .cursor-pointer):has-text("共")'
 
     def __init__(self, page: Page, base_url: str):
         super().__init__(page)

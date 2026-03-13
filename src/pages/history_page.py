@@ -21,7 +21,7 @@ class HistoryPage(BasePage):
     BREADCRUMB_ITEMS  = '.arco-breadcrumb-item'        # 面包屑导航
     LITERATURE_ITEMS  = '[class*="itemSplit"]'          # 文献条目
     KEYWORD_PILLS     = '[class*="pill"]'               # 关键词标签
-    ITEM_SUBTITLE     = '[class*="_subtitleLarge_"]'    # 列表页标题翻译（中文副标题）
+    ITEM_SUBTITLE     = '[class*="_subtitle"]'           # 列表页标题翻译（中文副标题）
     ITEM_AI_BOX       = '[class*="_highlightBox_"]'     # 列表页 AI 解读容器
 
     def __init__(self, page: Page, base_url: str):

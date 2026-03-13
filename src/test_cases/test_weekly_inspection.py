@@ -204,11 +204,11 @@ class TestWeeklyInspection:
                         empty_fields.append('详情页-中文摘要')
 
                     pme = detail_page.get_all_pme()
-                    if len(pme['problem']) < 10:
+                    if len(pme['problem']) < 30:
                         empty_fields.append(f'详情页-试图解决什么问题(仅{len(pme["problem"])}字)')
-                    if len(pme['method']) < 10:
+                    if len(pme['method']) < 30:
                         empty_fields.append(f'详情页-提出的方法是什么(仅{len(pme["method"])}字)')
-                    if len(pme['experiment']) < 10:
+                    if len(pme['experiment']) < 30:
                         empty_fields.append(f'详情页-做了哪些实验(仅{len(pme["experiment"])}字)')
 
                     if empty_fields:
